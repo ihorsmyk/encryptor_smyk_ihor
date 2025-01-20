@@ -1,0 +1,1 @@
+# encryptor_smyk_ihor
