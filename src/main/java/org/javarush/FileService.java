@@ -8,7 +8,6 @@ import java.nio.file.Files;
 
 public class FileService {
     public String readFile(Path path) {
-
         StringBuilder strBuilder = new StringBuilder();
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             String line;
@@ -24,7 +23,6 @@ public class FileService {
     }
 
     public void writeFile(Path path, String text) {
-
         try (BufferedWriter writer = Files.newBufferedWriter(path)) {
             if (Files.notExists(path)) {
                 Files.createFile(path);
