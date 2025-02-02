@@ -11,7 +11,13 @@ class ApplicationCore {
     void execute(String command, String fileAddress, String key) {
         this.command = command;
         this.fileAddress = fileAddress;
-        this.key = Integer.parseInt(key) % this.UNICODE_SYMBOLS_COUNT;
+        try {
+            this.key = Integer.parseInt(key) % this.UNICODE_SYMBOLS_COUNT;
+        } catch (NumberFormatException e) {
+            System.err.println("Invalid key format: " + key);
+            e.printStackTrace();
+            return;
+        }
 
         Path path = PathCreator.createPath(this.fileAddress);
         FileService fileService = new FileService();

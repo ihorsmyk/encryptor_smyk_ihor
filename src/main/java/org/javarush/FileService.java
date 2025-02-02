@@ -13,7 +13,7 @@ public class FileService {
             String line;
             int i = 1;
             while ((line = reader.readLine()) != null) {
-                strBuilder.append(line);
+                strBuilder.append(line + "\n");
                 i++;
             }
         } catch (IOException e) {

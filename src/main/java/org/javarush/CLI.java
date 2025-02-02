@@ -7,13 +7,13 @@ class CLI {
         String command, fileAddress, key;
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Введіть команду (ENCRYPT або DECRYPT) ->");
+        System.out.print("Enter the command (ENCRYPT or DECRYPT) ->");
         command = scanner.nextLine();
 
-        System.out.print("Введіть адресу файлу ->");
+        System.out.print("Enter the file address ->");
         fileAddress = scanner.nextLine();
 
-        System.out.print("ВВедіть ключ шифрування ->");
+        System.out.print("Enter the encryption key ->");
         key = scanner.nextLine();
 
         ApplicationCore applicationCore = new ApplicationCore();
